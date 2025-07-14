@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,13 +8,41 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     :root {
-      --bg: #0e0b17;
-      --text: #f1edff;
-      --muted: #b7b3cc;
-      --border: #3a2e60;
-      --accent: #a88eff;
-      --accent-hover: #c3b3ff;
-      --box-bg: #1c1531;
+      --bg-light: #f4f6f9;
+      --text-light: #1c1c1e;
+      --muted-light: #777;
+      --border-light: #d9e1ec;
+      --box-bg-light: #ffffff;
+      --accent-light: #6a5799;
+      --accent-hover-light: #8473c6;
+
+      --bg-dark: #0e0b17;
+      --text-dark: #f1edff;
+      --muted-dark: #b7b3cc;
+      --border-dark: #3a2e60;
+      --box-bg-dark: #1c1531;
+      --accent-dark: #a88eff;
+      --accent-hover-dark: #c3b3ff;
+    }
+
+    [data-theme="light"] {
+      --bg: var(--bg-light);
+      --text: var(--text-light);
+      --muted: var(--muted-light);
+      --border: var(--border-light);
+      --box-bg: var(--box-bg-light);
+      --accent: var(--accent-light);
+      --accent-hover: var(--accent-hover-light);
+    }
+
+    [data-theme="dark"] {
+      --bg: var(--bg-dark);
+      --text: var(--text-dark);
+      --muted: var(--muted-dark);
+      --border: var(--border-dark);
+      --box-bg: var(--box-bg-dark);
+      --accent: var(--accent-dark);
+      --accent-hover: var(--accent-hover-dark);
     }
 
     * {
@@ -26,8 +54,18 @@
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
-      color: var(--text); 
+      color: var(--text);
       padding: 22px 14px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 12px;
+      right: 18px;
+      cursor: pointer;
+      z-index: 100;
+      color: var(--muted);
     }
 
     .iphone-frame {
@@ -36,7 +74,7 @@
       max-width: 390px;
       width: 100%;
       margin: 0 auto 32px auto;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
       padding: 30px 22px;
       border: 1px solid var(--border);
     }
@@ -140,6 +178,9 @@
   </style>
 </head>
 <body>
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <i data-lucide="moon"></i>
+  </div>
   <div class="iphone-frame">
     <h1>Book Robin</h1>
     <p class="subtitle">Explore India's most compact and capable EV</p>
@@ -210,6 +251,12 @@
           }
         });
     });
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute("data-theme");
+      html.setAttribute("data-theme", current === "light" ? "dark" : "light");
+    }
   </script>
 </body>
 </html>
