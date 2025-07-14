@@ -140,6 +140,17 @@
       font-size: 0.75rem;
       color: #aaa;
       margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .label {
+      font-size: 0.65rem;
+      opacity: 0.5;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .icon {
@@ -195,7 +206,9 @@
 
     <div class="footer">
       <div id="viewCounter">
-        <i data-lucide="eye" style="width:14px; vertical-align: middle;"></i> <span id="viewCountText">loading...</span>
+        <i data-lucide="eye" style="width:14px;"></i>
+        <span id="viewCountText">loading...</span>
+        <span class="label">views</span>
       </div>
       This is a Robin showcase by <a href="https://www.vishalmerani.com" target="_blank">VishalMerani.com</a><br/>
       Acting as a partner-referral or affiliate for early access.<br/>
@@ -205,12 +218,25 @@
   </div>
 
   <script>
-    lucide.createIcons();
-    fetch('https://api.countapi.xyz/update/vishalmerani/robinviews/?amount=1')
-      .then(res => res.json())
-      .then(data => {
-        document.getElementById('viewCountText').innerText = `${data.value} views`;
-      });
+    window.addEventListener('DOMContentLoaded', function () {
+      lucide.createIcons();
+
+      fetch('https://api.countapi.xyz/update/vishalmerani/robinviews/?amount=1')
+        .then(res => res.json())
+        .then(data => {
+          const viewCountText = document.getElementById('viewCountText');
+          if (viewCountText) {
+            viewCountText.textContent = `${data.value}`;
+          }
+        })
+        .catch(err => {
+          console.error('View counter failed:', err);
+          const viewCountText = document.getElementById('viewCountText');
+          if (viewCountText) {
+            viewCountText.textContent = `–`;
+          }
+        });
+    });
   </script>
 </body>
 </html>
