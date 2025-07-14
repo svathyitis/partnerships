@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF‑8"/>
   <meta name="viewport" content="width=device‑width, initial‑scale=1.0"/>
-  <title>Robin EV – Vishal Merani x Wings</title>
+  <title>Book Robin – Wings EV x Vishal Merani</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -14,8 +14,9 @@
       --card-bg: #fff;
       --small: 0.65rem;
     }
+
     body {
-      margin:0;
+      margin: 0;
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       display: flex;
@@ -23,126 +24,147 @@
       align-items: center;
       min-height: 100vh;
     }
+
     .iphone {
-      width: 375px; max-width: 95%;
+      width: 375px;
+      max-width: 95%;
       background: #fff;
       border-radius: 2rem;
-      box-shadow: 0 8px 24px rgba(127,60,255,0.15);
+      box-shadow: 0 8px 24px rgba(127, 60, 255, 0.15);
       padding: 1.5rem;
     }
+
     h1 {
-      font-size:1.5rem;
+      font-size: 1.5rem;
       color: var(--primary);
       text-align: center;
-      margin-bottom:1rem;
+      margin-bottom: 1.25rem;
     }
+
+    .hero {
+      border-radius: 1.25rem;
+      overflow: hidden;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 0 10px rgba(127, 60, 255, 0.25);
+    }
+
+    .hero img {
+      width: 100%;
+      display: block;
+    }
+
     .video-wrap {
       position: relative;
       padding-bottom: 120%;
-      height:0;
+      height: 0;
       overflow: hidden;
-      border-radius:1.25rem;
-      box-shadow:0 0 12px rgba(127,60,255,0.25);
-      margin-bottom:1.5rem;
+      border-radius: 1.25rem;
+      box-shadow: 0 0 12px rgba(127, 60, 255, 0.2);
+      margin-bottom: 1.5rem;
     }
+
     .video-wrap iframe {
-      position:absolute;
-      top:0;left:0;
-      width:100%; height:100%;
-      border:0;
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
     }
+
     .card {
       background: var(--card-bg);
-      border:2px solid var(--neon);
-      border-radius:1.25rem;
-      padding:1rem 1.2rem;
-      margin-bottom:1.5rem;
-      box-shadow:0 0 10px rgba(127,60,255,0.25);
+      border: 2px solid var(--neon);
+      border-radius: 1.25rem;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(127, 60, 255, 0.2);
       transition: transform .3s;
     }
+
     .card:hover {
       transform: translateY(-4px);
     }
-    .card img {
-      width:100%; border-radius: .75rem;
-      margin-bottom: .75rem;
-    }
+
     .card h2 {
-      font-size:1.1rem;
+      font-size: 1.05rem;
       color: var(--text);
-      margin-bottom:.5rem;
+      margin-bottom: 0.4rem;
     }
+
     .card p {
-      font-size:.95rem;
-      color:#444;
-      margin-bottom:.75rem;
+      font-size: 0.92rem;
+      color: #444;
+      margin-bottom: 0.8rem;
     }
+
     .button {
-      display:inline-block;
+      display: inline-block;
       background: var(--primary);
-      color:#fff;
-      padding:.6rem 1.2rem;
-      border-radius:1.5rem;
-      font-weight:600;
-      text-decoration:none;
-      margin-right:0.5rem;
-      font-size:.95rem;
+      color: #fff;
+      padding: 0.5rem 1.1rem;
+      border-radius: 1.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
     }
+
     .button:hover {
-      background:#692edf;
+      background-color: #692edf;
     }
+
     .footer {
-      text-align:center;
       font-size: var(--small);
-      color:#aaa;
-      margin-top:1rem;
-      line-height:1.4;
+      color: #aaa;
+      text-align: center;
+      margin-top: 1rem;
+      line-height: 1.4;
     }
+
     .footer a {
-      color: var(--primary); text-decoration:none;
+      color: var(--primary);
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <div class="iphone">
-    <h1>Robin EV – Vishal Merani x Wings</h1>
+    <h1>Book Robin</h1>
+
+    <div class="hero">
+      <img src="robin-variants.png" alt="Robin EV Variants"/>
+    </div>
 
     <div class="video-wrap">
       <iframe src="https://www.instagram.com/reel/DLhwqPBS10k/embed" allowfullscreen></iframe>
     </div>
 
     <div class="card">
-      <img src="https://www.wingsev.com/wp-content/uploads/2024/05/battery_section_video.m4v" alt="Robin EV image"/>
-      <h2>🚘 Meet Robin</h2>
-      <p>Compact, connected EV by Wings EV: smart, sustainable, and built for urban India.</p>
+      <h2>🚗 Meet Robin</h2>
+      <p>India’s smartest electric ride by Wings EV – built for quick commutes, smart controls, and colorful urban energy.</p>
     </div>
 
     <div class="card">
-      <img src="https://www.wingsev.com/robin" alt="Variants"/>
-      <h2>⚙️ Explore Robin</h2>
-      <p>Discover all variants, specs & gallery.</p>
+      <h2>🎨 Explore Robin</h2>
+      <p>View specs, interior features, tech dashboard, and colorful variants. Robin fits your lifestyle beautifully.</p>
       <a class="button" href="https://www.wingsev.com/robin" target="_blank">Explore Robin</a>
     </div>
 
     <div class="card">
-      <img src="https://www.wingsev.com/robin/pre-booking/" alt="Book Now"/>
-      <h2>🚀 Book Now</h2>
-      <p>Reserve your Robin early at just ₹5,000 (refundable).</p>
-      <a class="button" href="https://www.wingsev.com/robin/pre-booking/" target="_blank">Book Now</a>
+      <h2>📦 Book Robin</h2>
+      <p>Get early access with a ₹5,000 refundable booking. Limited launch slots available for 2025.</p>
+      <a class="button" href="https://www.wingsev.com/robin/pre-booking/" target="_blank">Book Robin</a>
     </div>
 
     <div class="card">
-      <img src="https://www.wingsev.com" alt="Test Drive"/>
-      <h2>🏁 Test Drive</h2>
-      <p>Experience Robin first-hand. Schedule your test drive now.</p>
-      <a class="button" href="https://www.wingsev.com/book-test-drive" target="_blank">Test Drive</a>
+      <h2>🛞 Test Drive Robin</h2>
+      <p>Experience Robin in motion. Pick your nearest test location and feel the EV difference.</p>
+      <a class="button" href="https://www.wingsev.com/book-test-drive" target="_blank">Test Drive Robin</a>
     </div>
 
     <div class="footer">
-      <p>This page is a partner showcase & affiliate‑style referral.  
-      © Robin info is public and available across platforms.  
-      VishalMerani.com holds no ownership rights.</p>
-      <p>Page created by <a href="https://www.vishalmerani.com" target="_blank">VishalMerani.com</a> • Powered by <a href="https://www.wingsev.com" target="_blank">Wingsev.com</a></p>
+      This is a Robin showcase by <a href="https://www.vishalmerani.com" target="_blank">VishalMerani.com</a> <br/>
+      Acting as a partner-referral or affiliate for early access. <br/>
+      All Robin info is sourced from <a href="https://www.wingsev.com" target="_blank">Wingsev.com</a> and public platforms.<br/>
+      No rights reserved. Shared in good faith. GitHub mirror may exist.
     </div>
   </div>
 </body>
