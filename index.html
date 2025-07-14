@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device‑width, initial‑scale=1.0"/>
   <title>Book Robin – Wings EV x Vishal Merani</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     :root {
       --bg: #1c162b;
@@ -89,6 +90,9 @@
       font-size: 1.05rem;
       color: var(--text);
       margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .card p {
@@ -106,11 +110,11 @@
     }
 
     .card ul li::before {
-      content: "•";
-      color: var(--primary);
+      content: "✔️";
       display: inline-block;
-      width: 1em;
       margin-left: -1em;
+      width: 1em;
+      color: var(--primary);
     }
 
     .button {
@@ -166,27 +170,26 @@
     </div>
 
     <div class="card">
-      <h2>🎨 Explore Robin</h2>
-      <p>View specs, dashboard features, tech & build quality. Robin’s built to impress and protect.</p>
+      <h2><i data-lucide="palette" style="width: 18px;"></i> Explore Robin</h2>
+      <p>Designed for safety and smart urban use:</p>
       <ul>
-        <li><strong>Safety First, Always</strong></li>
-        <li>ARAI Approved: Passed 7 safety tests incl. full frontal crash</li>
-        <li>India-Ready: World’s thinnest LFP battery w/ 16 precision sensors</li>
-        <li>Built Tough: High-strength steel roll cage + skateboard chassis</li>
-        <li>Smart Alerts: Audio notifications for safety while driving</li>
+        <li>ARAI crash-tested, India-ready design</li>
+        <li>Ultra-thin LFP battery with 16 sensors</li>
+        <li>High-strength roll cage + skate platform</li>
+        <li>Smart alerts for added safety</li>
       </ul>
       <br/>
       <a class="button" href="https://www.wingsev.com/robin" target="_blank">Explore Robin</a>
     </div>
 
     <div class="card">
-      <h2>📦 Book Robin</h2>
+      <h2><i data-lucide="package" style="width: 18px;"></i> Book Robin</h2>
       <p>Get early access with a ₹5,000 refundable booking. Limited launch slots available for 2025.</p>
       <a class="button" href="https://www.wingsev.com/robin/pre-booking/" target="_blank">Book Robin</a>
     </div>
 
     <div class="card">
-      <h2>🛞 Test Drive Robin</h2>
+      <h2><i data-lucide="steering-wheel" style="width: 18px;"></i> Test Drive Robin</h2>
       <p>Experience Robin in motion. Pick your nearest test location and feel the EV difference.</p>
       <a class="button" href="https://www.wingsev.com/book-test-drive" target="_blank">Test Drive Robin</a>
     </div>
@@ -201,6 +204,8 @@
   </div>
 
   <script>
+    lucide.createIcons();
+
     fetch('https://api.countapi.xyz/update/vishalmerani/robinviews/?amount=1')
       .then(res => res.json())
       .then(data => {
