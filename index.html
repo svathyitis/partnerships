@@ -8,13 +8,13 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     :root {
-      --bg: #f4f6f9;
-      --text: #1c1c1e;
-      --muted: #777;
-      --border: #d9e1ec;
-      --accent: #6a5799;
-      --accent-hover: #8473c6;
-      --box-bg: #ffffff;
+      --bg: #111114;
+      --text: #f1f1f1;
+      --muted: #999;
+      --border: #333;
+      --accent: #9c85ff;
+      --accent-hover: #b9a7ff;
+      --box-bg: #1c1c1f;
     }
 
     * {
@@ -36,7 +36,7 @@
       max-width: 390px;
       width: 100%;
       margin: 0 auto 32px auto;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
       padding: 30px 22px;
       border: 1px solid var(--border);
     }
@@ -111,7 +111,7 @@
 
     #viewCounter {
       font-size: 0.7rem;
-      color: #999;
+      color: var(--muted);
       margin-top: 1rem;
       display: flex;
       justify-content: center;
@@ -121,7 +121,14 @@
 
     .label {
       font-size: 0.65rem;
-      opacity: 0.6;
+      opacity: 0.5;
+    }
+
+    .video-card iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      border-radius: 16px;
     }
   </style>
 </head>
@@ -134,10 +141,8 @@
       <img src="robin-variants.png" alt="Robin EV Variants" style="width:100%; border-radius: 16px; margin-bottom: 1rem;" />
     </div>
 
-    <div class="info-block">
-      <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px;">
-        <iframe src="https://www.instagram.com/reel/DLhwqPBS10k/embed" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-      </div>
+    <div class="info-block video-card">
+      <iframe src="https://www.instagram.com/reel/DLhwqPBS10k/embed" allowfullscreen></iframe>
     </div>
 
     <div class="info-block">
