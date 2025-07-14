@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Robin EV – Early Access by Vishal Merani</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f4f0fb;
+      --card-bg: #ffffff;
+      --primary: #7f3cff;
+      --neon: #b987ff;
+      --text-dark: #1d1d1f;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .iphone-container {
+      width: 375px;
+      max-width: 100%;
+      background: #fff;
+      border-radius: 2rem;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 2px solid var(--neon);
+      border-radius: 1.25rem;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 8px rgba(127, 60, 255, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: var(--primary);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 1.5rem;
+      text-align: center;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #6a2de0;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #999;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 400px) {
+      .iphone-container {
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="iphone-container">
+    <h1>Robin EV x Vishal Merani</h1>
+
+    <div class="card">
+      <h2>🚗 What is Robin?</h2>
+      <p>India’s smartest all-electric vehicle by Wings EV — designed for compact city travel and smart daily commutes.</p>
+    </div>
+
+    <div class="card">
+      <h2>📦 Vehicle Types</h2>
+      <p>Multiple variants including city commuter and smart utility models. All-electric, ultra-efficient, and app-connected.</p>
+    </div>
+
+    <div class="card">
+      <h2>💰 Pricing & Launch</h2>
+      <p>Starts under ₹3.5 Lakhs. Launching late 2025. Early access available now via VishalMerani.com.</p>
+    </div>
+
+    <div class="card">
+      <h2>🔐 Early Booking</h2>
+      <p>Pre-book Robin now and get priority delivery & exclusive perks.</p>
+      <a href="https://www.vishalmerani.com" class="button">Book Now</a>
+    </div>
+
+    <div class="footer">
+      Powered by VishalMerani.com • In collaboration with Wingsev.com
+    </div>
+  </div>
+</body>
+</html>
