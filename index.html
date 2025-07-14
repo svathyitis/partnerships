@@ -86,15 +86,6 @@
       transform: translateY(-4px);
     }
 
-    .card h2 {
-      font-size: 1.05rem;
-      color: var(--text);
-      margin-bottom: 0.4rem;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
     .card p {
       font-size: 0.92rem;
       color: #e4dafd;
@@ -150,6 +141,11 @@
       color: #aaa;
       margin-bottom: 0.5rem;
     }
+
+    .icon {
+      vertical-align: middle;
+      margin-right: 6px;
+    }
   </style>
 </head>
 <body>
@@ -170,7 +166,6 @@
     </div>
 
     <div class="card">
-      <h2><i data-lucide="palette" style="width: 18px;"></i> Explore Robin</h2>
       <p>Designed for safety and smart urban use:</p>
       <ul>
         <li>ARAI crash-tested, India-ready design</li>
@@ -179,23 +174,29 @@
         <li>Smart alerts for added safety</li>
       </ul>
       <br/>
-      <a class="button" href="https://www.wingsev.com/robin" target="_blank">Explore Robin</a>
+      <a class="button" href="https://www.wingsev.com/robin" target="_blank">
+        <i data-lucide="palette" class="icon" style="width: 16px;"></i> Explore Robin
+      </a>
     </div>
 
     <div class="card">
-      <h2><i data-lucide="package" style="width: 18px;"></i> Book Robin</h2>
       <p>Get early access with a ₹5,000 refundable booking. Limited launch slots available for 2025.</p>
-      <a class="button" href="https://www.wingsev.com/robin/pre-booking/" target="_blank">Book Robin</a>
+      <a class="button" href="https://www.wingsev.com/robin/pre-booking/" target="_blank">
+        <i data-lucide="package" class="icon" style="width: 16px;"></i> Book Robin
+      </a>
     </div>
 
     <div class="card">
-      <h2><i data-lucide="steering-wheel" style="width: 18px;"></i> Test Drive Robin</h2>
       <p>Experience Robin in motion. Pick your nearest test location and feel the EV difference.</p>
-      <a class="button" href="https://www.wingsev.com/book-test-drive" target="_blank">Test Drive Robin</a>
+      <a class="button" href="https://www.wingsev.com/book-test-drive" target="_blank">
+        <i data-lucide="steering-wheel" class="icon" style="width: 16px;"></i> Test Drive Robin
+      </a>
     </div>
 
     <div class="footer">
-      <div id="viewCounter">👁️ loading views...</div>
+      <div id="viewCounter">
+        <i data-lucide="eye" style="width:14px; vertical-align: middle;"></i> <span id="viewCountText">loading...</span>
+      </div>
       This is a Robin showcase by <a href="https://www.vishalmerani.com" target="_blank">VishalMerani.com</a><br/>
       Acting as a partner-referral or affiliate for early access.<br/>
       All Robin info is sourced from <a href="https://www.wingsev.com" target="_blank">Wingsev.com</a> and public platforms.<br/>
@@ -205,11 +206,10 @@
 
   <script>
     lucide.createIcons();
-
     fetch('https://api.countapi.xyz/update/vishalmerani/robinviews/?amount=1')
       .then(res => res.json())
       .then(data => {
-        document.getElementById('viewCounter').innerText = `👁️ ${data.value} views`;
+        document.getElementById('viewCountText').innerText = `${data.value} views`;
       });
   </script>
 </body>
