@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF‑8"/>
-  <meta name="viewport" content="width=device‑width, initial‑scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book Robin – Wings EV x Vishal Merani</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     :root {
@@ -16,51 +16,38 @@
       --small: 0.65rem;
     }
 
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .iphone {
-      width: 375px;
-      max-width: 95%;
-      background: var(--bg);
-      border-radius: 2rem;
-      box-shadow: 0 8px 32px rgba(127, 60, 255, 0.25);
-      padding: 1.5rem;
+      padding: 1rem;
     }
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: var(--primary);
       text-align: center;
-      margin-bottom: 1.2rem;
-    }
-
-    .hero {
-      border-radius: 1.25rem;
-      overflow: hidden;
-      margin-bottom: 1.25rem;
-      box-shadow: 0 0 12px rgba(194, 153, 255, 0.2);
+      margin-bottom: 1.5rem;
     }
 
     .hero img {
       width: 100%;
-      display: block;
+      border-radius: 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 12px rgba(194, 153, 255, 0.2);
     }
 
     .video-wrap {
       position: relative;
-      padding-bottom: 120%;
+      padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
-      border-radius: 1.25rem;
+      border-radius: 1rem;
       box-shadow: 0 0 12px rgba(194, 153, 255, 0.15);
       margin-bottom: 1.5rem;
     }
@@ -75,19 +62,14 @@
     .card {
       background: var(--card-bg);
       border: 2px solid var(--neon);
-      border-radius: 1.25rem;
-      padding: 1rem 1.2rem;
+      border-radius: 1rem;
+      padding: 1.2rem;
       margin-bottom: 1.5rem;
       box-shadow: 0 0 10px rgba(194, 153, 255, 0.12);
-      transition: transform .3s;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
     }
 
     .card p {
-      font-size: 0.92rem;
+      font-size: 1rem;
       color: #e4dafd;
       margin-bottom: 0.8rem;
     }
@@ -97,11 +79,11 @@
       padding-left: 1rem;
       margin: 0;
       color: #d2c9ec;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
 
     .card ul li::before {
-      content: "✓";
+      content: "\2713";
       display: inline-block;
       margin-left: -1em;
       width: 1em;
@@ -112,11 +94,11 @@
       display: inline-block;
       background: var(--primary);
       color: #1c162b;
-      padding: 0.5rem 1.1rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 1.5rem;
       font-weight: 600;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
 
     .button:hover {
@@ -127,7 +109,7 @@
       font-size: var(--small);
       color: #bdb6d9;
       text-align: center;
-      margin-top: 1rem;
+      margin-top: 2rem;
       line-height: 1.4;
     }
 
@@ -160,70 +142,67 @@
   </style>
 </head>
 <body>
-  <div class="iphone">
-    <h1>Book Robin</h1>
+  <h1>Book Robin</h1>
 
-    <div class="hero">
-      <img src="robin-variants.png" alt="Robin EV Variants" />
-    </div>
+  <div class="hero">
+    <img src="robin-variants.png" alt="Robin EV Variants" />
+  </div>
 
-    <div class="video-wrap">
-      <iframe src="https://www.instagram.com/reel/DLhwqPBS10k/embed" allowfullscreen></iframe>
-    </div>
+  <div class="video-wrap">
+    <iframe src="https://www.instagram.com/reel/DLhwqPBS10k/embed" allowfullscreen></iframe>
+  </div>
 
-    <div class="card">
-      <h2>🚗 Meet Robin</h2>
-      <p>India’s smartest electric ride by Wings EV – built for quick commutes, smart controls, and colorful urban energy.</p>
-    </div>
+  <div class="card">
+    <h2>🚗 Meet Robin</h2>
+    <p>India’s smartest electric ride by Wings EV – built for quick commutes, smart controls, and colorful urban energy.</p>
+  </div>
 
-    <div class="card">
-      <p>Designed for safety and smart urban use:</p>
-      <ul>
-        <li>ARAI crash-tested, India-ready design</li>
-        <li>Ultra-thin LFP battery with 16 sensors</li>
-        <li>High-strength roll cage + skate platform</li>
-        <li>Smart alerts for added safety</li>
-      </ul>
-      <br/>
-      <a class="button" href="https://www.wingsev.com/robin" target="_blank">
-        <i data-lucide="shield-check" class="icon" style="width: 16px;"></i> Explore Robin
-      </a>
-    </div>
+  <div class="card">
+    <p>Designed for safety and smart urban use:</p>
+    <ul>
+      <li>ARAI crash-tested, India-ready design</li>
+      <li>Ultra-thin LFP battery with 16 sensors</li>
+      <li>High-strength roll cage + skate platform</li>
+      <li>Smart alerts for added safety</li>
+    </ul>
+    <br/>
+    <a class="button" href="https://www.wingsev.com/robin" target="_blank">
+      <i data-lucide="shield-check" class="icon" style="width: 16px;"></i> Explore Robin
+    </a>
+  </div>
 
-    <div class="card">
-      <p>Get early access with a ₹5,000 refundable booking. Limited launch slots available for 2025.</p>
-      <a class="button" href="https://www.wingsev.com/robin/pre-booking/" target="_blank">
-        <i data-lucide="package" class="icon" style="width: 16px;"></i> Book Robin
-      </a>
-    </div>
+  <div class="card">
+    <p>Get early access with a ₹5,000 refundable booking. Limited launch slots available for 2025.</p>
+    <a class="button" href="https://www.wingsev.com/robin/pre-booking/" target="_blank">
+      <i data-lucide="package" class="icon" style="width: 16px;"></i> Book Robin
+    </a>
+  </div>
 
-    <div class="card">
-      <p>Experience Robin in motion. Pick your nearest test location and feel the EV difference.</p>
-      <a class="button" href="https://www.wingsev.com/book-test-drive" target="_blank">
-        <i data-lucide="truck" class="icon" style="width: 16px;"></i>
-        <i data-lucide="zap" class="icon" style="width: 16px;"></i>
-        <i data-lucide="timer" class="icon" style="width: 16px;"></i>
-        Test Drive Robin
-      </a>
-    </div>
+  <div class="card">
+    <p>Experience Robin in motion. Pick your nearest test location and feel the EV difference.</p>
+    <a class="button" href="https://www.wingsev.com/book-test-drive" target="_blank">
+      <i data-lucide="truck" class="icon" style="width: 16px;"></i>
+      <i data-lucide="zap" class="icon" style="width: 16px;"></i>
+      <i data-lucide="timer" class="icon" style="width: 16px;"></i>
+      Test Drive Robin
+    </a>
+  </div>
 
-    <div class="footer">
-      <div id="viewCounter">
-        <i data-lucide="eye" style="width:14px;"></i>
-        <span id="viewCountText">loading...</span>
-        <span class="label">views</span>
-      </div>
-      This is a Robin showcase by <a href="https://www.vishalmerani.com" target="_blank">VishalMerani.com</a><br/>
-      Acting as a partner-referral or affiliate for early access.<br/>
-      All Robin info is sourced from <a href="https://www.wingsev.com" target="_blank">Wingsev.com</a> and public platforms.<br/>
-      No rights reserved. Shared in good faith. GitHub mirror may exist.
+  <div class="footer">
+    <div id="viewCounter">
+      <i data-lucide="eye" style="width:14px;"></i>
+      <span id="viewCountText">loading...</span>
+      <span class="label">views</span>
     </div>
+    This is a Robin showcase by <a href="https://www.vishalmerani.com" target="_blank">VishalMerani.com</a><br/>
+    Acting as a partner-referral or affiliate for early access.<br/>
+    All Robin info is sourced from <a href="https://www.wingsev.com" target="_blank">Wingsev.com</a> and public platforms.<br/>
+    No rights reserved. Shared in good faith. GitHub mirror may exist.
   </div>
 
   <script>
     window.addEventListener('DOMContentLoaded', function () {
       lucide.createIcons();
-
       fetch('https://api.countapi.xyz/update/vishalmerani/robinviews/?amount=1')
         .then(res => res.json())
         .then(data => {
