@@ -10,19 +10,19 @@
     :root {
       --bg-light: #f4f6f9;
       --text-light: #1c1c1e;
-      --muted-light: #777;
-      --border-light: #d9e1ec;
+      --muted-light: #999;
+      --border-light: #e0e0e0;
       --box-bg-light: #ffffff;
-      --accent-light: #6a5799;
-      --accent-hover-light: #8473c6;
+      --accent-light: #6f42c1;
+      --accent-hover-light: #8a63d2;
 
-      --bg-dark: #0e0b17;
-      --text-dark: #f1edff;
-      --muted-dark: #b7b3cc;
-      --border-dark: #3a2e60;
-      --box-bg-dark: #1c1531;
+      --bg-dark: #0d0c1d;
+      --text-dark: #ffffff;
+      --muted-dark: #bdbac6;
+      --border-dark: #3d3457;
+      --box-bg-dark: #1a142f;
       --accent-dark: #a88eff;
-      --accent-hover-dark: #c3b3ff;
+      --accent-hover-dark: #c4b3ff;
     }
 
     [data-theme="light"] {
@@ -60,12 +60,20 @@
     }
 
     .theme-toggle {
-      position: fixed;
-      top: 12px;
-      right: 18px;
-      cursor: pointer;
-      z-index: 100;
+      text-align: right;
+      max-width: 390px;
+      margin: 0 auto 10px auto;
+    }
+
+    .theme-toggle button {
+      background: none;
+      border: none;
       color: var(--muted);
+      cursor: pointer;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .iphone-frame {
@@ -178,8 +186,10 @@
   </style>
 </head>
 <body>
-  <div class="theme-toggle" onclick="toggleTheme()">
-    <i data-lucide="moon"></i>
+  <div class="theme-toggle">
+    <button onclick="toggleTheme()">
+      <i data-lucide="moon"></i> Toggle Theme
+    </button>
   </div>
   <div class="iphone-frame">
     <h1>Book Robin</h1>
