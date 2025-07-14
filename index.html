@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Robin EV – Early Access by Vishal Merani</title>
+  <title>Robin EV – Vishal Merani x Wings</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #f4f0fb;
-      --card-bg: #ffffff;
+      --bg: #f6f2ff;
       --primary: #7f3cff;
-      --neon: #b987ff;
-      --text-dark: #1d1d1f;
+      --neon: #c299ff;
+      --text: #1e1b29;
+      --card-bg: #ffffff;
     }
 
     body {
@@ -26,10 +26,10 @@
 
     .iphone-container {
       width: 375px;
-      max-width: 100%;
+      max-width: 95%;
       background: #fff;
       border-radius: 2rem;
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 8px 24px rgba(127, 60, 255, 0.15);
       padding: 1.5rem;
     }
 
@@ -44,9 +44,9 @@
       background-color: var(--card-bg);
       border: 2px solid var(--neon);
       border-radius: 1.25rem;
-      padding: 1rem 1.25rem;
+      padding: 1rem 1.2rem;
       margin-bottom: 1.5rem;
-      box-shadow: 0 0 8px rgba(127, 60, 255, 0.3);
+      box-shadow: 0 0 10px rgba(127, 60, 255, 0.25);
       transition: transform 0.3s ease;
     }
 
@@ -56,13 +56,13 @@
 
     .card h2 {
       font-size: 1.1rem;
-      color: var(--text-dark);
+      color: var(--text);
       margin-bottom: 0.5rem;
     }
 
     .card p {
       font-size: 0.95rem;
-      color: #333;
+      color: #444;
       margin-bottom: 0.5rem;
     }
 
@@ -72,21 +72,39 @@
       color: #fff;
       padding: 0.6rem 1.2rem;
       border-radius: 1.5rem;
-      text-align: center;
       font-weight: 600;
       text-decoration: none;
-      transition: background 0.3s ease;
+      margin-right: 0.5rem;
     }
 
     .button:hover {
-      background-color: #6a2de0;
+      background-color: #692edf;
     }
 
     .footer {
       text-align: center;
       font-size: 0.75rem;
-      color: #999;
+      color: #aaa;
       margin-top: 1rem;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 120%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 1.25rem;
+      box-shadow: 0 0 12px rgba(127, 60, 255, 0.25);
+      margin-bottom: 1.5rem;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     @media (max-width: 400px) {
@@ -99,32 +117,39 @@
 </head>
 <body>
   <div class="iphone-container">
-    <h1>Robin EV x Vishal Merani</h1>
+    <h1>Robin EV – Powered by Wings</h1>
 
-    <div class="card">
-      <h2>🚗 What is Robin?</h2>
-      <p>India’s smartest all-electric vehicle by Wings EV — designed for compact city travel and smart daily commutes.</p>
+    <div class="video-wrapper">
+      <iframe src="https://www.instagram.com/reel/DLhwqPBS10k/embed" allowfullscreen></iframe>
     </div>
 
     <div class="card">
-      <h2>📦 Vehicle Types</h2>
-      <p>Multiple variants including city commuter and smart utility models. All-electric, ultra-efficient, and app-connected.</p>
+      <h2>🚘 Meet Robin</h2>
+      <p>Robin is India’s most compact, connected electric vehicle – by <strong>Wings EV</strong>. It's designed for urban India, with smart features and sustainable power.</p>
     </div>
 
     <div class="card">
-      <h2>💰 Pricing & Launch</h2>
-      <p>Starts under ₹3.5 Lakhs. Launching late 2025. Early access available now via VishalMerani.com.</p>
+      <h2>⚙️ Types & Variants</h2>
+      <p>Available in multiple versions: solo rides, shared mobility, delivery. Smart dashboard, mobile app control, and efficient battery tech come standard.</p>
     </div>
 
     <div class="card">
-      <h2>🔐 Early Booking</h2>
-      <p>Pre-book Robin now and get priority delivery & exclusive perks.</p>
-      <a href="https://www.vishalmerani.com" class="button">Book Now</a>
+      <h2>📅 Launch & Pricing</h2>
+      <p>Launching late 2025. Introductory pricing starts under <strong>₹3.5 Lakhs</strong>. Book early and be part of the electric shift.</p>
+    </div>
+
+    <div class="card">
+      <h2>🚀 Book or Test Drive</h2>
+      <p>Book Robin or schedule a test ride through the official Wings EV portal.</p>
+      <a class="button" href="https://www.wingsev.com/booking" target="_blank">Book Now</a>
+      <a class="button" href="https://www.wingsev.com/testdrive" target="_blank">Test Drive</a>
     </div>
 
     <div class="footer">
-      Powered by VishalMerani.com • In collaboration with Wingsev.com
+      In collaboration with <a href="https://www.wingsev.com" target="_blank" style="color:#7f3cff;text-decoration:none;">Wingsev.com</a> <br>
+      Page by <a href="https://www.vishalmerani.com" target="_blank" style="color:#7f3cff;text-decoration:none;">VishalMerani.com</a>
     </div>
   </div>
 </body>
 </html>
+
