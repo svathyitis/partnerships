@@ -39,7 +39,7 @@
       font-size: 1.5rem;
       color: var(--primary);
       text-align: center;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.2rem;
     }
 
     .hero {
@@ -97,6 +97,22 @@
       margin-bottom: 0.8rem;
     }
 
+    .card ul {
+      list-style: none;
+      padding-left: 1rem;
+      margin: 0;
+      color: #d2c9ec;
+      font-size: 0.9rem;
+    }
+
+    .card ul li::before {
+      content: "•";
+      color: var(--primary);
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
     .button {
       display: inline-block;
       background: var(--primary);
@@ -124,6 +140,12 @@
       color: var(--primary);
       text-decoration: none;
     }
+
+    #viewCounter {
+      font-size: 0.75rem;
+      color: #aaa;
+      margin-bottom: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -145,7 +167,15 @@
 
     <div class="card">
       <h2>🎨 Explore Robin</h2>
-      <p>View specs, interior features, tech dashboard, and colorful variants. Robin fits your lifestyle beautifully.</p>
+      <p>View specs, dashboard features, tech & build quality. Robin’s built to impress and protect.</p>
+      <ul>
+        <li><strong>Safety First, Always</strong></li>
+        <li>ARAI Approved: Passed 7 safety tests incl. full frontal crash</li>
+        <li>India-Ready: World’s thinnest LFP battery w/ 16 precision sensors</li>
+        <li>Built Tough: High-strength steel roll cage + skateboard chassis</li>
+        <li>Smart Alerts: Audio notifications for safety while driving</li>
+      </ul>
+      <br/>
       <a class="button" href="https://www.wingsev.com/robin" target="_blank">Explore Robin</a>
     </div>
 
@@ -162,11 +192,20 @@
     </div>
 
     <div class="footer">
-      This is a Robin showcase by <a href="https://www.vishalmerani.com" target="_blank">VishalMerani.com</a> <br/>
-      Acting as a partner-referral or affiliate for early access. <br/>
+      <div id="viewCounter">👁️ loading views...</div>
+      This is a Robin showcase by <a href="https://www.vishalmerani.com" target="_blank">VishalMerani.com</a><br/>
+      Acting as a partner-referral or affiliate for early access.<br/>
       All Robin info is sourced from <a href="https://www.wingsev.com" target="_blank">Wingsev.com</a> and public platforms.<br/>
       No rights reserved. Shared in good faith. GitHub mirror may exist.
     </div>
   </div>
+
+  <script>
+    fetch('https://api.countapi.xyz/update/vishalmerani/robinviews/?amount=1')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('viewCounter').innerText = `👁️ ${data.value} views`;
+      });
+  </script>
 </body>
 </html>
